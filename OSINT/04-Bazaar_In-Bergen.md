@@ -22,7 +22,7 @@ site:uib.no bazaar
 
 ![Google search results for "bazaar" on uib.no](./images/04-google-dork.png)
 
-Four candidates in the results. The 4th (`nongnu.uib.no/bazaar/`) is a directory listing full of `bazaar-0.99.0.tar.bz2`-style files dated **2004-02-05** — clearly an old mirror of the GNU Bazaar source releases that nobody's touched in 20+ years. `nongnu.uib.no` is UiB's mirror of nongnu.org (GNU's hosting for non-official-GNU projects).
+The 4th (`nongnu.uib.no/bazaar/`) is a directory listing full of `bazaar-0.99.0.tar.bz2`-style files dated **2004-02-05** — clearly an old mirror of the GNU Bazaar source releases that nobody's touched in 20+ years. `nongnu.uib.no` is UiB's mirror of nongnu.org (GNU's hosting for non-official-GNU projects).
 
 ### About `.bz2`
 
