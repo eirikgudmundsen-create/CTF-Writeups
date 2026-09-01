@@ -1,0 +1,51 @@
+IIK3100 — Ethical Hacking & Penetration Testing
+
+CTF-style writeups from the portfolio for IIK3100 at NTNU. The course is assessed entirely through practical hacking tasks and a final capstone, so this repo grows across the semester as new challenges are solved.
+
+Topics
+
+The syllabus works through the full offensive-security lifecycle:
+
+Reconnaissance — general and technical information gathering, network recon
+Service attacks — getting in touch with and attacking FTP, DNS, SMTP, and other exposed services
+Web hacking
+Basics: hidden content discovery, client-side manipulation, brute-forcing, parameter tampering
+Client-side: Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF)
+Server-side injections: SQL injection, XPath injection, template injection
+Specific vulns: file inclusion, session manipulation, IDOR
+Binary exploitation — stack overflows, debugging, understanding the virtual address space (x86/x64), Return-Oriented Programming, heap exploitation
+Internal network attacks — NetBIOS, SMB
+Social engineering — phishing and spear-phishing practice
+Wireless hacking
+Structure
+
+Each writeup lives in its own folder, grouped by category:
+
+osint/
+  stortinget-metadata/
+  linkedin-pentester/
+  uib-bazaar/
+web/
+binary/
+network/
+social/
+wireless/
+
+Every writeup follows the same shape — task, recon, dead ends, pivot, resolution, and lessons learned — so the focus stays on the technique and thought process, not just the flag.
+
+Disclaimer
+
+All exploitation happens against lab environments or CTF targets provided by the course. No live systems are attacked without explicit authorization.
+
+Where a challenge involves real people (OSINT identification, metadata tied to a real employee, etc.), names and personally identifying details are redacted from the public writeup — the method is preserved, the identity is not.
+
+Course
+Institution: NTNU (Gjøvik / Trondheim)
+Credits: 7.5 ECTS
+Level: Third-year, autumn semester
+Assessment: Portfolio (100%)
+Course coordinator: Muhammad Mudassar Yamin
+Project content
+IIK3100
+Created by you
+Add PDFs, documents, or other text to reference in this project.
