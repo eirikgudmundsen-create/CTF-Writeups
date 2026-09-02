@@ -2,7 +2,6 @@
 
 **Category:** OSINT / Lateral thinking
 **Flag format:** `FLAG{Full website address with Directory/, no https://}`
-**Flag:** `FLAG{nongnu.uib.no/bazaar/}`
 
 ---
 
