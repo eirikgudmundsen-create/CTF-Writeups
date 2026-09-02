@@ -2,7 +2,6 @@
 
 **Category:** OSINT / Metadata
 **Flag format:** `FLAG{Author First Name Only}`
-**Flag:** `FLAG{Magnus}`
 
 ---
 
