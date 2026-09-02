@@ -2,7 +2,6 @@
 
 **Category:** OSINT / People search
 **Flag format:** `FLAG{FirstNameOnly}`
-**Flag:** `FLAG{Jørgen}`
 
 ---
 
