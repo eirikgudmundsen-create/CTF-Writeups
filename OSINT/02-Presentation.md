@@ -2,7 +2,6 @@
 
 **Category:** OSINT / Metadata + Search engine diversity
 **Flag format:** `FLAG{email}`
-**Flag:** `FLAG{bjorn.steine@stortinget.no}`
 
 ---
 
