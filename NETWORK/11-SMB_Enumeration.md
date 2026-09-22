@@ -37,5 +37,3 @@ Read AND write access with no authentication. The "oh noes!" comment is the chal
 ## Takeaway
 
 nmap labels unauthenticated SMB access as "Anonymous" because that is the protocol-level term, but the Samba server maps those connections to a real local account, `guest` (configured via `guest account = ...` in `smb.conf`). When a challenge asks "which account", the answer is what the server calls it, not what the wire protocol calls it — SMB is the protocol, Samba is the Linux implementation, and the account is a Samba concept.
-
-Also: always save scan output with `-oN` or `-oA`. Grepping `READ/WRITE` across a saved file is one line; scrolling terminal history to find it is a waste of time.
