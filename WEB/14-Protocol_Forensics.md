@@ -2,9 +2,6 @@
 
 **Challenge:** *An HTTP exchange carries more than what a browser chooses to display.*
 
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4001/` — sequential lock
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4002/` — without sequential lock
-
 ![Challenge](images/01-challenge.png)
 
 ## Recon
