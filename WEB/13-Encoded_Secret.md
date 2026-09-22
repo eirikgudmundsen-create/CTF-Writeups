@@ -3,12 +3,7 @@
 **Points:** 50
 **Challenge:** *A value has been transformed or rotated before storage.*
 
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4001/` — sequential lock
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4002/` — without sequential lock
-
-![Challenge](images/01-challenge.png)
-
-## Recon
+## Web
 
 The page rendered a service config export with four base64-looking tokens in a `[tokens]` block:
 
