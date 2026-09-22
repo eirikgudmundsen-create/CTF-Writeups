@@ -3,14 +3,11 @@
 **Points:** 50
 **Challenge:** *Locate data not rendered on the visible page.*
 
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4001/` — sequential lock
-- `http://challenges.iik3100-h26.iaas.iik.ntnu.no:4002/` — without sequential lock
 
-![Challenge](images/01-challenge.png)
 
-## Recon
+## Web
 
-Solved on `:4002`. Opening DevTools revealed an off-screen hidden container:
+Opening DevTools revealed an off-screen hidden container:
 
 ```html
 <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden" aria-hidden="true">
