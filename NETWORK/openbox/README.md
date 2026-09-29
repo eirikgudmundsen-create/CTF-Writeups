@@ -199,8 +199,7 @@ ssh root@172.20.10.4     # password: toor
 sourced on the box, then reused against a service that never should have
 accepted it directly.
 
-> **Proof-of-root screenshot to add:** run `id; hostname; whoami` in the root
-> session and capture `uid=0(root)` — the canonical evidence shot.
+![Root id](images/openbox10.png)
 
 ### Vulnerability classification
 
