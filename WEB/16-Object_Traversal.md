@@ -4,8 +4,6 @@
 **Category:** IDOR / Access Control
 **Challenge:** *Read the `secret` field from the admin's profile via the unauthenticated object-reference vulnerability in `/ch2/api/profile/<id>`.*
 
-![Challenge](images/01-challenge.png)
-
 ## Recon
 
 The API returns a profile as JSON keyed on the `<id>` in the URL. My own account is user `#5`, and the page lists the known accounts — `admin=1`, `alice=2`, `bob=3`, `charlie=4`. IDs are small sequential integers, so any profile is reachable by changing the number.
