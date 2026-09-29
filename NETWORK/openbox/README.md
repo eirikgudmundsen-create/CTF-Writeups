@@ -94,40 +94,6 @@ the real path came from active enumeration.
 
 ## Enumeration (NMAP + Metasploit auxiliary)
 
-### Metasploit — `smb_version`
-
-```
-msf6 > use auxiliary/scanner/smb/smb_version
-msf6 auxiliary(scanner/smb/smb_version) > set RHOSTS 172.20.10.4
-msf6 auxiliary(scanner/smb/smb_version) > run
-```
-
-![smb_version](images/04-smb-version.png)
-
-Pinned detail the nmap "Samba 4" banner couldn't: **SMB 2 + 3, preferred dialect
-SMB 3.1.1, AES-128-GCM, signing *optional*, auth domain KALI.** Optional signing
-is worth noting (relay attacks theoretically in scope).
-
-### Metasploit — `smb_login` (credential validation)
-
-Testing the hypothesis that `toor` is a valid password:
-
-```
-msf6 > use auxiliary/scanner/smb/smb_login
-msf6 auxiliary(scanner/smb/smb_login) > set RHOSTS 172.20.10.4
-msf6 auxiliary(scanner/smb/smb_login) > set SMBUSER admin
-msf6 auxiliary(scanner/smb/smb_login) > set SMBPass toor
-msf6 auxiliary(scanner/smb/smb_login) > run
-```
-
-![smb_login success](images/05-smb-login.png)
-
-```
-[+] 172.20.10.4:445 - Success: '.\admin:toor'
-```
-
-`admin:toor` **validated over SMB.** (`No active DB` is only a warning that loot
-won't auto-save — not a failure.)
 
 ### SMB share enumeration
 
@@ -172,6 +138,42 @@ admin password: toor
 This closes the provenance: `toor` was **located on the box**, in
 `admin_notes.txt` in the `admin` SMB share — not assumed. The `smb_login`
 success earlier confirmed it works; this shows *where it leaked from*.
+
+### Metasploit — `smb_version`
+
+```
+msf6 > use auxiliary/scanner/smb/smb_version
+msf6 auxiliary(scanner/smb/smb_version) > set RHOSTS 172.20.10.4
+msf6 auxiliary(scanner/smb/smb_version) > run
+```
+
+![smb_version](images/04-smb-version.png)
+
+Pinned detail the nmap "Samba 4" banner couldn't: **SMB 2 + 3, preferred dialect
+SMB 3.1.1, AES-128-GCM, signing *optional*, auth domain KALI.** Optional signing
+is worth noting (relay attacks theoretically in scope).
+
+### Metasploit — `smb_login` (credential validation)
+
+Testing `toor` is a valid password:
+
+```
+msf6 > use auxiliary/scanner/smb/smb_login
+msf6 auxiliary(scanner/smb/smb_login) > set RHOSTS 172.20.10.4
+msf6 auxiliary(scanner/smb/smb_login) > set SMBUSER admin
+msf6 auxiliary(scanner/smb/smb_login) > set SMBPass toor
+msf6 auxiliary(scanner/smb/smb_login) > run
+```
+
+![smb_login success](images/05-smb-login.png)
+
+```
+[+] 172.20.10.4:445 - Success: '.\admin:toor'
+```
+
+`admin:toor` **validated over SMB.** (`No active DB` is only a warning that loot
+won't auto-save — not a failure.)
+
 
 ---
 
