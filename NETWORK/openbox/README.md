@@ -92,7 +92,6 @@ the real path came from active enumeration.
 
 ---
 
-## Enumeration (NMAP + Metasploit auxiliary)
 
 
 ### SMB share enumeration
@@ -135,9 +134,6 @@ path to a shell.
 admin password: toor
 ```
 
-This closes the provenance: `toor` was **located on the box**, in
-`admin_notes.txt` in the `admin` SMB share — not assumed. The `smb_login`
-success earlier confirmed it works; this shows *where it leaked from*.
 
 ### Metasploit — `smb_version`
 
