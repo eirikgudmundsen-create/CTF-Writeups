@@ -3,8 +3,6 @@
 **Category:** Stored XSS / Cookie Theft
 **Challenge:** *A moderator bot with a privileged cookie reads every post. Craft a payload that, rendered in the bot's browser, sends its cookie to `/ch3/collect?data=<cookie>`.*
 
-![Challenge](images/01-challenge.png)
-
 ## Recon
 
 Two facts from the scenario chain together:
