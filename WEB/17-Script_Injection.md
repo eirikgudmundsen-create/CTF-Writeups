@@ -31,7 +31,7 @@ Post this message to the board:
 
 The bot renders the post, its browser ships its cookie to `/ch3/collect`, and the flag appears:
 
-![Payload posted; bot exfiltrates its cookie; flag revealed](images/02-solved.png)
+![Payload posted; bot exfiltrates its cookie; flag revealed](images/challange3-solve.png)
 
 ## Flag
 
