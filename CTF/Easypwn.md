@@ -1,6 +1,6 @@
 # Easypwn — ret2win
 
-**Category:** pwn · **Points:** 995 · `nc 10.212.172.46 2664`
+**Category:** pwn · `nc 10.212.172.46 2664`
 
 A classic **ret2win**: overflow a stack buffer, overwrite the saved return
 address, and redirect execution into a `win()` function that spawns a shell.
