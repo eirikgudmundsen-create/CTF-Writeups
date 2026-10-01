@@ -29,7 +29,7 @@ gcc -o easypwn main.c -no-pie -fno-stack-protector
 ## Vulnerability
 
 `main()` reads **256 bytes** (`0x100`) into a **32-byte** (`0x20`) stack buffer
-with `fgets` — a textbook overflow.
+with `fgets`  a textbook overflow.
 
 ![main in Ghidra](images/ghidra-main.png)
 
@@ -48,7 +48,7 @@ The buffer sits at `[rbp-0x20]`, so:
 offset = 0x20 (buffer) + 8 (saved RBP) = 40 bytes
 ```
 
-Confirmed empirically with a cyclic pattern — at the crash, `RIP` held
+Confirmed empirically with a cyclic pattern  at the crash, `RIP` held
 `0x6161616161616166`, and `cyclic -l` resolved it to **40**.
 
 ## The target: `win()`
@@ -64,7 +64,7 @@ $ nm easypwn | grep win
 system("/bin/sh");
 ```
 
-Because PIE is off, its address `0x40121d` is valid on every run — no leak needed.
+Because PIE is off, its address `0x40121d` is valid on every run, no leak needed.
 
 ## The gotcha: stack alignment
 
@@ -121,8 +121,7 @@ CTFkom{345y_pwn_345y_l1f3}
 ## Takeaways — ret2win checklist
 
 1. `checksec` → look for **No canary** + **No PIE**.
-2. Trace the calls to find the function that actually **reads input** (not always `main`).
-3. Offset = buffer distance from the disassembly (`[rbp-X]`) **+ 8** for the saved RBP — confirm with `cyclic`.
-4. Grab the target address with `nm`.
-5. Payload = `padding + p64(target)`.
-6. Segfault *after* reaching the target? It's `movaps` alignment — add a `ret` gadget.
+2. Offset = buffer distance from the disassembly (`[rbp-X]`) **+ 8** for the saved RBP — confirm with `cyclic`.
+3. Grab the target address with `nm`.
+4. Payload = `padding + p64(target)`.
+5. Segfault *after* reaching the target? It's `movaps` alignment — add a `ret` gadget.
