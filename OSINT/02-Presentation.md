@@ -71,5 +71,4 @@ FLAG{bjorn.steine@stortinget.no}
 
 ## Takeaway
 
-- **When Google says "no", try Yandex.** Different engines index different slices of the web — Yandex is especially strong for `.no`, older content, and government sites.
 - **`<w:removePersonalInformation/>` in `settings.xml`** is the signal that a doc has been scrubbed. Pivot to a different file rather than grinding on internals.
