@@ -29,20 +29,3 @@ This proves it works and leaks local users. `ctfuser` has a real home at
 
 ![Flag retrieved](images/flag.png)
 
-## Fix
-
-Resolve the path first, then check it's still inside the images folder:
-
-```python
-import os
-BASE = "/var/www/html/images"
-
-def safe_read(user_input):
-    requested = os.path.realpath(os.path.join(BASE, user_input))
-    if os.path.commonpath([requested, BASE]) != BASE:
-        raise PermissionError("blocked")
-    return open(requested, "rb").read()
-```
-
-Checking the raw string for `../` isn't enough — encoded forms like `%2e%2e%2f`
-slip past. Resolve the real path and compare.
