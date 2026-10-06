@@ -1,7 +1,6 @@
 # Challenge 3 — Path Traversal (CatGallery File Server)
 
 **Vulnerability:** Path Traversal (CWE-22)
-**Flag:** `CTF{d0t_d0t_sl4sh_all_th3_w4y}`
 
 ## The Bug
 
