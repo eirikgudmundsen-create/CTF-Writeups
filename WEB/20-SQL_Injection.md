@@ -1,7 +1,6 @@
 # Challenge 1 · SQL Injection — ShopDB Product Search
 
 **Category:** Web / SQLi
-**Flag:** `CTF{uni0n_b4s3d_sqli_f0r_the_win}`
 
 ## Overview
 
